@@ -1,0 +1,316 @@
+<!-- kit variables -->
+
+
+
+
+
+<!-- end of kit variables -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="css/nullstyle.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/iconsfont.css">
+	<link rel="stylesheet" href="css/payment.css">
+	<title>Payment</title>
+</head>
+<body>
+<header class="container-md p-4">
+	<a href="index.html" class="logo">morent</a>
+</header>
+<main>
+	<article class="payment-page container-sm">
+		<form action="#" id="payment_form" class="payment-form row row-cols-1">
+			<section class="payment-rentalsum form-item">
+				<div class="form-item-top-text">
+					<h1 class="form-item-heading">Rental Summary</h1>
+					<p class="form-item-description form-item-paragraph">Prices may change depending on the length of the rental and the price of your rental car.</p>
+				</div>
+				<div class="payment-rentalsum-carinfo row align-items-center my-4">
+					<div class="payment-rentalsum-carinfo-imgwrapper col-6 col-md-3">
+						<div class="payment-rentalsum-carinfo-img">
+							<img src="img/payment/rental_car.png" alt="">
+						</div>
+					</div>
+					<div class="payment-rentalsum-carinfo-text col">
+						<h1 class="payment-rentalsum-carinfo-heading pb-3 bold-tx px32-20">Nissan GT-R</h1>
+						<div class="payment-rentalsum-carinfo-rate row row-cols-auto align-items-center">
+							<div class="payment-rentalsum-carinfo-stars">
+								<img src="img/main/stars.png" style="width: 100%;height: 100%;object-fit: contain" alt="">
+							</div>
+							<p class="payment-rentalsum-carinfo-reviewers dark-blue med-tx px14-12">440+ Reviewers</p>
+						</div>
+					</div>
+				</div>
+				<div class="payment-rentalsum-priceinfo">
+					<div class="payment-rentalsum-calculation">
+						<div class="payment-rentalsum-subtotal row row-cols-auto justify-content-between align-items-center">
+							<p class="form-item-paragraph">Subtotal</p>
+							<p class="form-item-subheading" id="rental_subtotal_price">$80.00</p>
+						</div>
+						<div class="payment-rentalsum-tax row row-cols-auto mt-3 justify-content-between align-items-center">
+							<p class="form-item-paragraph">Tax</p>
+							<p class="form-item-subheading" id="rental_tax_price">$0</p>
+						</div>
+					</div>
+					<div class="payment-rentalsum-form row row-cols-1 g-0 mt-4">
+						<input type="text" class="form-item-input form-item-paragraph" style="padding-right: 55%;" id="promo" name="promo" placeholder="Apply promo code">
+						<button class="form-item-input-btn form-item-subheading" id="promo_btn">Apply now</button>
+					</div>
+					<div class="payment-rentalsum-total mt-5 row row-cols-auto gy-3 justify-content-between align-items-center">
+						<div class="payment-rentalsum-total-text">
+							<p class="form-item-heading">Total Rental Price</p>
+							<p class="form-item-description">Overall price and includes rental discount</p>
+						</div>
+						<h2 class="payment-rentalsum-total-price bold-tx px32-20" id="rental_total_price">$80.00</h2>
+					</div>
+				</div>
+			</section>
+			<section class="payment-billing form-item">
+				<div class="form-item-top">
+					<div class="form-item-top-text">
+						<h1 class="form-item-heading">Billing Info</h1>
+						<p class="form-item-description form-item-paragraph">Please enter your billing</p>
+					</div>
+					<p class="form-item-step form-item-paragraph">Step 1 of 4</p>
+				</div>
+				<div class="payment-billinginfo">
+					<div class="payment-form-item-options">
+						<div class="payment-form-item-option">
+							<p class="form-item-subheading">Name</p>
+							<input type="text" class="form-item-input form-item-paragraph _req" id="name" name="name" placeholder="Your name">
+						</div>
+						<div class="payment-form-item-option">
+							<p class="form-item-subheading">Phone Number</p>
+							<input type="text" class="form-item-input form-item-paragraph _req" id="phone" name="phone" placeholder="Phone Number">
+						</div>
+					</div>
+					<div class="payment-form-item-options">
+						<div class="payment-form-item-option">
+							<p class="form-item-subheading">Address</p>
+							<input type="text" class="form-item-input form-item-paragraph _req" id="adress" name="address" placeholder="Address">
+						</div>
+						<div class="payment-form-item-option">
+							<p class="form-item-subheading">Town / City</p>
+							<input type="text" class="form-item-input form-item-paragraph _req" id="city" name="city" placeholder="Town or city">
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="payment-rental form-item">
+				<div class="form-item-top">
+					<div class="form-item-top-text">
+						<h1 class="form-item-heading">Rental Info</h1>
+						<p class="form-item-description form-item-paragraph">Please enter your rental date</p>
+					</div>
+					<p class="form-item-step form-item-paragraph">Step 2 of 4</p>
+				</div>	
+				<div class="payment-rental-pickup">
+					<input class="form-item-radio" checked type="radio" name="rental_type" id="rental_pickup">
+					<label class="form-item-subheading ms-2" for="rental_pickup">Pick - Up</label>
+					<div class="payment-form-item-options">
+						<div class="payment-form-item-option">
+							<p class="form-item-subheading">Locations</p>
+							<input list="location_list" class="form-item-input form-item-paragraph _req" id="location_pickup" name="location" placeholder="Select your city">
+							<datalist id="location_list">
+								<option value="Kyiv"></option>
+								<option value="Donetsk"></option>
+								<option value="Lviv"></option>
+							</datalist>
+						</div>
+						<div class="payment-form-item-option">
+							<p class="form-item-subheading">Date</p>
+							<input list="date_list" class="form-item-input form-item-paragraph _req" id="date_pickup" name="date" placeholder="Select your date">
+							<datalist id="date_list">
+								<option value="30.08"></option>
+								<option value="31.08"></option>
+								<option value="01.09"></option>
+							</datalist>
+						</div>
+					</div>
+					<div class="payment-form-item-options solo-option">
+						<div class="payment-form-item-option">
+							<p class="form-item-subheading">Time</p>
+							<input list="time_list" class="form-item-input form-item-paragraph _req" id="time_pickup" name="time" placeholder="Select your time">
+							<datalist id="time_list">
+								<option value="12 am"></option>
+								<option value="3 pm"></option>
+								<option value="11 pm"></option>
+							</datalist>
+						</div>
+					</div>
+				</div>
+				<div class="payment-rental-dropoff">
+					<input class="form-item-radio" type="radio" name="rental_type" id="rental_dropoff">
+					<label class="form-item-subheading ms-2" for="rental_dropoff">Drop - Off</label>
+					<div class="payment-form-item-options">
+						<div class="payment-form-item-option">
+							<p class="form-item-subheading">Locations</p>
+							<input list="location_list" class="form-item-input form-item-paragraph" disabled id="location_dropoff" name="location" placeholder="Select your city">
+							<datalist id="location_list">
+								<option value="Kyiv"></option>
+								<option value="Donetsk"></option>
+								<option value="Lviv"></option>
+							</datalist>
+						</div>
+						<div class="payment-form-item-option">
+							<p class="form-item-subheading">Date</p>
+							<input list="date_list" class="form-item-input form-item-paragraph" disabled id="date_dropoff" name="date" placeholder="Select your date">
+							<datalist id="date_list">
+								<option value="30.08"></option>
+								<option value="31.08"></option>
+								<option value="01.09"></option>
+							</datalist>
+						</div>
+					</div>
+					<div class="payment-form-item-options solo-option">
+						<div class="payment-form-item-option">
+							<p class="form-item-subheading">Time</p>
+							<input list="time_list" class="form-item-input form-item-paragraph" disabled id="time_dropoff" name="time" placeholder="Select your time">
+							<datalist id="time_list">
+								<option value="12 am"></option>
+								<option value="3 pm"></option>
+								<option value="11 pm"></option>
+							</datalist>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="payment-method form-item">
+				<div class="form-item-top">
+					<div class="form-item-top-text">
+						<h1 class="form-item-heading">Payment Method</h1>
+						<p class="form-item-description form-item-paragraph">Please enter your payment method</p>
+					</div>
+					<p class="form-item-step form-item-paragraph">Step 3 of 4</p>
+				</div>
+				
+				<div class="payment-method-creditcard payment-method-option form-item-input pt-0 pb-4">
+					<input class="form-item-radio" type="radio" checked name="payment_method" id="credit_card">
+					<label class="form-item-subheading ms-2" for="credit_card">Credit Card</label>
+					<div class="payment-form-item-options">
+						<div class="payment-form-item-option">
+							<p class="form-item-subheading">Card Number</p>
+							<input type="text" class="form-item-input form-item-paragraph _req" id="card_num" name="card_num" placeholder="Card Number">
+						</div>
+						<div class="payment-form-item-option">
+							<p class="form-item-subheading">Expiration Date</p>
+							<input type="text" class="form-item-input form-item-paragraph _req" id="card_exp" name="card_exp" placeholder="DD/MM/YY">
+						</div>
+					</div>
+					<div class="payment-form-item-options">
+						<div class="payment-form-item-option">
+							<p class="form-item-subheading">Card Holder</p>
+							<input type="text" class="form-item-input form-item-paragraph _req" id="card_holder" name="card_holder" placeholder="Card Holder">
+						</div>
+						<div class="payment-form-item-option">
+							<p class="form-item-subheading">CVC</p>
+							<input type="text" class="form-item-input form-item-paragraph _req" id="card_cvc" name="card_cvc" placeholder="CVC">
+						</div>
+					</div>
+				</div>
+				<div class="payment-method-paypal payment-method-option form-item-input disabled pt-0 pb-4">
+					<input class="form-item-radio" type="radio" name="payment_method" id="paypal">
+					<label class="form-item-subheading ms-2" for="paypal">PayPal</label>
+					<div class="payment-form-item-options">
+						<div class="payment-form-item-option">
+							<p class="form-item-subheading">PayPal Number</p>
+							<input type="text" class="form-item-input form-item-paragraph" id="paypal_num" name="paypal" placeholder="PayPal Number">
+						</div>
+					</div>
+				</div>
+				<div class="payment-method-bitcoin payment-method-option form-item-input disabled pt-0 pb-4 form-item-input">
+					<input class="form-item-radio" type="radio" name="payment_method" id="bitcoin">
+					<label class="form-item-subheading ms-2" for="bitcoin">Bitcoin</label>
+					<div class="payment-form-item-options">
+						<div class="payment-form-item-option">
+							<p class="form-item-subheading">Bitcoin adress</p>
+							<input type="text" class="form-item-input form-item-paragraph" id="bitcoin_num" name="bitcoin" placeholder="Bitcoin Address">
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="payment-confirmation form-item">
+				<div class="form-item-top">
+					<div class="form-item-top-text">
+						<h1 class="form-item-heading">Confirmation</h1>
+						<p class="form-item-description form-item-paragraph">We are getting to the end. Just few clicks and your rental is ready!</p>
+					</div>
+					<p class="form-item-step form-item-paragraph">Step 4 of 4</p>
+				</div>
+				<div class="payment-form-item-option form-item-input row row-cols-auto flex-nowrap align-items-center mx-0 mt-5">	
+					<input type="checkbox" class="_req" style="width: 24px; height: 24px;" id="sending" name="sending">
+					<label for="sending" class=" form-item-subheading">I agree with sending an Marketing and newsletter emails. No spam, promissed!</label>
+				</div>
+				<div class="payment-form-item-option form-item-input row row-cols-auto flex-nowrap align-items-center mx-0 mt-4 mb-5">
+					<input type="checkbox" class="_req" style="width: 24px; height: 24px;" id="terms" name="terms">
+					<label for="terms" class="form-item-subheading">I agree with our terms and conditions and privacy policy.</label>
+				</div>
+				<button type="submit" id="submit_btn" class="blue-btn bold-tx px16 py-3 px-3 px-md-5" style="border-radius: 10px">Rent Now</button>
+				<div class="payment-confirmation-bot">
+					<div class="payment-confirmation-img mt-4 mb-3">
+						<img src="img/payment/confidential.png"  alt="">
+					</div>
+					<div class="payment-confirmation-bot-text">
+						<p class="form-item-subheading">All your data are safe</p>
+						<p class="form-item-paragraph pt-2">We are using the most advanced security to provide you the best experience ever.</p>
+					</div>
+				</div>
+			</section>
+		</form>
+	</article>
+</main>
+<footer>
+	<div class="footer-container container-md pt-5 pb-4 pb-md-5">
+		<div class="footer-wrapper row justify-content-between m-0">
+			<div class="footer-brandinfo col-12 col-md-5 col-lg-6">
+				<h1 class="footer-brand logo">morent</h1>
+				<p class="footer-brandslogan light-gray col-12 col-lg-6 med-tx 16-12-tx mt-3">Our vision is to provide convenience and help increase your sales business.</p>
+			</div>
+			<div class="footer-cards col row row-cols-auto justify-content-between my-5 mt-md-0 mb-md-5 ms-md-2">
+				<div class="footer-card">
+					<h3 class="footer-cardheading dark-blue sbold-tx px20">About</h3>
+					<ul class="footer-links">
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">How it works</a></li>
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Featured</a></li>
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Partnership</a></li>
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Business Relation</a></li>
+					</ul>
+				</div>
+				<div class="footer-card mb-5 mb-md-0 order-md-1">
+					<h3 class="footer-cardheading dark-blue sbold-tx px20">Socials</h3>
+					<ul class="footer-links">
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Discord</a></li>
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Instagram</a></li>
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Twitter</a></li>
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Facebook</a></li>
+					</ul>
+				</div>
+				<div class="footer-card">
+					<h3 class="footer-cardheading dark-blue sbold-tx px20">Community</h3>
+					<ul class="footer-links">
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Events</a></li>
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Blog</a></li>
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Podcast</a></li>
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Invite a friend</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-license-info d-md-flex pt-md-5">
+				<div class="footer-agreement-info col-12 col-md-auto row row-cols-auto justify-content-between order-md-1 mb-4 mb-md-0">
+					<a href="##" class="footer-privacy black sbold-tx px16-12">Privacy & Policy</a>
+					<a href="##" class="footer-terms black sbold-tx px16-12">Terms & Condition</a>
+				</div>
+				<p class="footer-copyright col black sbold-tx px16-12">©2022 MORENT. All rights reserved</p>
+			</div>
+		</div>
+	</div>
+</footer>
+	
+	
+	<script src="js/payment.js"></script>
+</body>
+</html>

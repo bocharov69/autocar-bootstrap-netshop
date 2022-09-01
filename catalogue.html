@@ -1,0 +1,475 @@
+<!-- kit variables -->
+
+
+
+
+
+
+
+<!-- end of kit variables -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="css/nullstyle.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/iconsfont.css">
+	<link rel="stylesheet" href="css/catalogue.css">
+	<title>Catalogue</title>
+</head>
+<body>
+<header class="header">
+	<div class="container-md">
+		<nav class="navbar row align-items-center justify-content-between flex-md-nowrap pt-5 pb-4 pb-md-5 px-4">
+			<button class="navbar-toggler col-1 d-md-none order-md-5 p-0" type="button"><span></span></button>
+			<div class="navbar-collapse col order-md-3">
+				<ul class="navbar-nav row row-cols-auto flex-nowrap justify-content-end">
+					<li class="nav-item">
+						<a class="nav-btn _icon-favorite" href="#"></a>
+					</li>
+					<li class="nav-item has-note">
+						<a class="nav-btn _icon-notification" href="#"></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-btn _icon-settings" href="#"></a>
+					</li>
+				</ul>
+			</div>
+			<div class="navbar-placeholder col-8 col-sm-10 col-md-1 col-lg-2 order-md-2"></div>
+			<a class="navbar-profile nav-item col-1 p-0 order-md-4" style="justify-self: end;" href="#"><img class="nav-btn" src="img/main/avatar_male.png" alt=""></a>
+			<a class="navbar-brand logo col p-0 my-4 my-md-0 me-md-2 order-md-0" href="index.html">morent</a>
+			<form class="navbar-searchform col-md-5 col-12 row flex-nowrap align-items-center m-0 p-0 ps-3 p-md-3 ms-lg-5 ms-md-2 order-md-1" role="search">
+				<div class="navbar-searchwrapper col-10 col-sm-11 row flex-nowrap align-items-center py-3 p-md-0">
+					<label class="navbar-searchicon nav-btn col _icon-search" for="nav-search"></label>
+					<input class="navbar-livesearch col-10 col-lg-9 col-md-8 col-sm-11" id="nav-search" type="search" placeholder="Search something here">
+				</div>
+				<button class="navbar-filter nav-btn col _icon-filter ms-4 p-3 m-md-0 p-md-0" type="button"></button>
+			</form>
+		</nav>
+	</div>
+</header>
+<main>
+	<aside class="filterbar">
+	<div class="filterbar-types">
+		<h3 class="filterbar-heading">type</h3>
+		<div class="filterbar-type">
+			<input class="filterbar-checkbox" type="checkbox" id="sport" name="sport" data-filter="type-sport">
+			<label class="filterbar-label" for="sport">Sport<span class="filterbar-amount-span" id="sport-amount" data-amount="10">(10)</span></label>
+		</div>
+		<div class="filterbar-type">
+			<input class="filterbar-checkbox" type="checkbox" id="suv" name="suv" data-filter="type-suv">
+			<label class="filterbar-label" for="suv">SUV<span class="filterbar-amount-span" id="suv-amount" data-amount="12">(12)</span></label>
+		</div>
+		<div class="filterbar-type">
+			<input class="filterbar-checkbox" type="checkbox" id="mvp" name="mvp" data-filter="type-mvp">
+			<label class="filterbar-label" for="mvp">MVP<span class="filterbar-amount-span" id="mvp-amount" data-amount="16">(16)</span></label>
+		</div>
+		<div class="filterbar-type">
+			<input class="filterbar-checkbox" type="checkbox" id="sedan" name="sedan" data-filter="type-sedan">
+			<label class="filterbar-label" for="sedan">Sedan<span class="filterbar-amount-span" id="sedan-amount" data-amount="20">(20)</span></label>
+		</div>
+		<div class="filterbar-type">
+			<input class="filterbar-checkbox" type="checkbox" id="coupe" name="coupe" data-filter="type-coupe">
+			<label class="filterbar-label" for="coupe">Coupe<span class="filterbar-amount-span" id="coupe-amount" data-amount="14">(14)</span></label>
+		</div>
+		<div class="filterbar-type">
+			<input class="filterbar-checkbox" type="checkbox" id="hatchback" name="hatchback" data-filter="type-hatchback">
+			<label class="filterbar-label" for="hatchback">Hatchback<span class="filterbar-amount-span" id="hatchback-amount" data-amount="14">(14)</span></label>
+		</div>
+	</div>
+	<div class="filterbar-capacities">
+		<h3 class="filterbar-heading">capacity</h3>
+		<div class="filterbar-capacity">
+			<input class="filterbar-checkbox" type="checkbox" id="two-person" name="two-person" data-filter="capacity-2">
+			<label class="filterbar-label" for="two-person">2 Person<span class="filterbar-amount-span" id="two-person-amount" data-amount="10">(10)</span></label>
+		</div>
+		<div class="filterbar-capacity">
+			<input class="filterbar-checkbox" type="checkbox" id="four-person" name="four-person" data-filter="capacity-4">
+			<label class="filterbar-label" for="four-person">4 Person<span class="filterbar-amount-span" id="four-person-amount" data-amount="14">(14)</span></label>
+		</div>
+		<div class="filterbar-capacity">
+			<input class="filterbar-checkbox" type="checkbox" id="six-person" name="six-person" data-filter="capacity-6">
+			<label class="filterbar-label" for="six-person">6 Person<span class="filterbar-amount-span" id="six-person-amount" data-amount="12">(12)</span></label>
+		</div>
+		<div class="filterbar-capacity">
+			<input class="filterbar-checkbox" type="checkbox" id="eight-person" name="eight-person" data-filter="capacity-8">
+			<label class="filterbar-label" for="eight-person">8 or More<span class="filterbar-amount-span" id="eight-person-amount" data-amount="16">(16)</span></label>
+		</div>
+	</div>
+	<div class="filterbar-price ">
+		<h3 class="filterbar-heading">price</h3>
+		<div class="filterbar-price-range">
+			<input class="filterbar-price-scroll" type="range" id="price-scroll" name="price-scroll" min="0" max="120" value="100" step="10">
+			<label class="filterbar-label" for="price-scroll">Max. $<span id="max-price">100</span></label>
+		</div>
+	</div>
+	<div class="filterbar-loading-screen"><img src="img/main/load.gif" alt=""></div>
+</aside>
+	<article class="catalogue">
+		<h1 class="catalogue-heading light-gray sbold-tx px16">Recomendation Cars</h1>
+		<div class="catalogue-container">
+			<div class="catalogue-wrapper row row-cols-1 row-cols-xl-auto gy-4 justify-content-evenly">
+				<div class="catalogue-card filtered-card" id="koenigsegg" data-type="sport" data-capacity="2" data-price="99">
+					<div class="catalogue-card-top">
+						<div class="catalogue-card-top-text">
+							<h3 class="catalogue-card-name">Koenigsegg</h3>
+							<p class="catalogue-card-type">Sport</p>
+						</div>
+						<div class="like-btn _icon-favorite"></div>
+					</div>
+					<div class="catalogue-card-mid">
+						<div class="catalogue-card-img">
+							<img src="img/catalogue/koenigsegg.png" alt="">
+						</div>
+						<div class="catalogue-card-properties">
+							<p class="catalogue-card-property _icon-fuel">90L</p>
+							<p class="catalogue-card-property _icon-steering">Manual</p>
+							<p class="catalogue-card-property _icon-capacity">2 People</p>
+						</div>
+					</div>
+					<div class="catalogue-card-bot">
+						<div class="catalogue-card-price-info">
+							<p class="catalogue-card-price">$99.00/<span>day</span></p>
+						</div>
+						<a class="blue-btn" href="payment.html">Rent Now</a>
+					</div>
+				</div>
+				<div class="catalogue-card filtered-card" id="nissan_gtr" data-type="sport" data-capacity="2" data-price="80">
+					<div class="catalogue-card-top">
+						<div class="catalogue-card-top-text">
+							<h3 class="catalogue-card-name">Nissan GT-R</h3>
+							<p class="catalogue-card-type">Sport</p>
+						</div>
+						<div class="like-btn _icon-fav"></div>
+					</div>
+					<div class="catalogue-card-mid">
+						<div class="catalogue-card-img">
+							<img src="img/catalogue/nissan_gtr.png" alt="">
+						</div>
+						<div class="catalogue-card-properties">
+							<p class="catalogue-card-property _icon-fuel">80L</p>
+							<p class="catalogue-card-property _icon-steering">Manual</p>
+							<p class="catalogue-card-property _icon-capacity">2 People</p>
+						</div>
+					</div>
+					<div class="catalogue-card-bot">
+						<div class="catalogue-card-price-info">
+							<p class="catalogue-card-price">$80.00/<span>day</span></p>
+							<p class="catalogue-card-discount">$100.00</p>
+						</div>
+						<a class="blue-btn" href="payment.html">Rent Now</a>
+					</div>
+				</div>
+				<div class="catalogue-card filtered-card" id="rolls_royce" data-type="sport" data-capacity="4" data-price="96">
+					<div class="catalogue-card-top">
+						<div class="catalogue-card-top-text">
+							<h3 class="catalogue-card-name">Rolls-Royce</h3>
+							<p class="catalogue-card-type">Sport</p>
+						</div>
+						<div class="like-btn _icon-fav"></div>
+					</div>
+					<div class="catalogue-card-mid">
+						<div class="catalogue-card-img">
+							<img src="img/catalogue/rolls_royce.png" alt="">
+						</div>
+						<div class="catalogue-card-properties">
+							<p class="catalogue-card-property _icon-fuel">70L</p>
+							<p class="catalogue-card-property _icon-steering">Manual</p>
+							<p class="catalogue-card-property _icon-capacity">4 People</p>
+						</div>
+					</div>
+					<div class="catalogue-card-bot">
+						<div class="catalogue-card-price-info">
+							<p class="catalogue-card-price">$96.00/<span>day</span></p>
+						</div>
+						<a class="blue-btn" href="payment.html">Rent Now</a>
+					</div>
+				</div>
+
+				<div class="catalogue-card filtered-card" id="toyota_anr" data-type="suv" data-capacity="6" data-price="72">
+					<div class="catalogue-card-top">
+						<div class="catalogue-card-top-text">
+							<h3 class="catalogue-card-name">All New Rush</h3>
+							<p class="catalogue-card-type">SUV</p>
+						</div>
+						<div class="like-btn _icon-fav"></div>
+					</div>
+					<div class="catalogue-card-mid">
+						<div class="catalogue-card-img">
+							<img src="img/catalogue/toyota_anr.png" alt="">
+						</div>
+						<div class="catalogue-card-properties">
+							<p class="catalogue-card-property _icon-fuel">70L</p>
+							<p class="catalogue-card-property _icon-steering">Manual</p>
+							<p class="catalogue-card-property _icon-capacity">6 People</p>
+						</div>
+					</div>
+					<div class="catalogue-card-bot">
+						<div class="catalogue-card-price-info">
+							<p class="catalogue-card-price">$96.00/<span>day</span></p>
+						</div>
+						<a class="blue-btn" href="payment.html">Rent Now</a>
+					</div>
+				</div>
+				<div class="catalogue-card filtered-card" id="honda_crv" data-type="suv" data-capacity="6" data-price="80">
+					<div class="catalogue-card-top">
+						<div class="catalogue-card-top-text">
+							<h3 class="catalogue-card-name">CR-V</h3>
+							<p class="catalogue-card-type">SUV</p>
+						</div>
+						<div class="like-btn _icon-fav"></div>
+					</div>
+					<div class="catalogue-card-mid">
+						<div class="catalogue-card-img">
+							<img src="img/catalogue/honda_crv.png" alt="">
+						</div>
+						<div class="catalogue-card-properties">
+							<p class="catalogue-card-property _icon-fuel">80L</p>
+							<p class="catalogue-card-property _icon-steering">Manual</p>
+							<p class="catalogue-card-property _icon-capacity">6 People</p>
+						</div>
+					</div>
+					<div class="catalogue-card-bot">
+						<div class="catalogue-card-price-info">
+							<p class="catalogue-card-price">$99.00/<span>day</span></p>
+						</div>
+						<a class="blue-btn" href="payment.html">Rent Now</a>
+					</div>
+				</div>
+				<div class="catalogue-card filtered-card" id="toyota_ant" data-type="suv" data-capacity="6" data-price="74">
+					<div class="catalogue-card-top">
+						<div class="catalogue-card-top-text">
+							<h3 class="catalogue-card-name">All New Terios</h3>
+							<p class="catalogue-card-type">SUV</p>
+						</div>
+						<div class="like-btn _icon-fav"></div>
+					</div>
+					<div class="catalogue-card-mid">
+						<div class="catalogue-card-img">
+							<img src="img/catalogue/toyota_ant.png" alt="">
+						</div>
+						<div class="catalogue-card-properties">
+							<p class="catalogue-card-property _icon-fuel">90L</p>
+							<p class="catalogue-card-property _icon-steering">Manual</p>
+							<p class="catalogue-card-property _icon-capacity">6 People</p>
+						</div>
+					</div>
+					<div class="catalogue-card-bot">
+						<div class="catalogue-card-price-info">
+							<p class="catalogue-card-price">$80.00/<span>day</span></p>
+							<p class="catalogue-card-discount">$100.00</p>
+						</div>
+						<a class="blue-btn" href="payment.html">Rent Now</a>
+					</div>
+				</div>
+
+				<div class="catalogue-card filtered-card" id="koenigsegg2" data-type="sport" data-capacity="2" data-price="99">
+					<div class="catalogue-card-top">
+						<div class="catalogue-card-top-text">
+							<h3 class="catalogue-card-name">Koenigsegg</h3>
+							<p class="catalogue-card-type">Sport</p>
+						</div>
+						<div class="like-btn _icon-favorite"></div>
+					</div>
+					<div class="catalogue-card-mid">
+						<div class="catalogue-card-img">
+							<img src="img/catalogue/koenigsegg.png" alt="">
+						</div>
+						<div class="catalogue-card-properties">
+							<p class="catalogue-card-property _icon-fuel">90L</p>
+							<p class="catalogue-card-property _icon-steering">Manual</p>
+							<p class="catalogue-card-property _icon-capacity">2 People</p>
+						</div>
+					</div>
+					<div class="catalogue-card-bot">
+						<div class="catalogue-card-price-info">
+							<p class="catalogue-card-price">$99.00/<span>day</span></p>
+						</div>
+						<a class="blue-btn" href="payment.html">Rent Now</a>
+					</div>
+				</div>
+				<div class="catalogue-card filtered-card" id="nissan_gtr2" data-type="sport" data-capacity="2" data-price="80">
+					<div class="catalogue-card-top">
+						<div class="catalogue-card-top-text">
+							<h3 class="catalogue-card-name">Nissan GT-R</h3>
+							<p class="catalogue-card-type">Sport</p>
+						</div>
+						<div class="like-btn _icon-fav"></div>
+					</div>
+					<div class="catalogue-card-mid">
+						<div class="catalogue-card-img">
+							<img src="img/catalogue/nissan_gtr.png" alt="">
+						</div>
+						<div class="catalogue-card-properties">
+							<p class="catalogue-card-property _icon-fuel">80L</p>
+							<p class="catalogue-card-property _icon-steering">Manual</p>
+							<p class="catalogue-card-property _icon-capacity">2 People</p>
+						</div>
+					</div>
+					<div class="catalogue-card-bot">
+						<div class="catalogue-card-price-info">
+							<p class="catalogue-card-price">$80.00/<span>day</span></p>
+							<p class="catalogue-card-discount">$100.00</p>
+						</div>
+						<a class="blue-btn" href="payment.html">Rent Now</a>
+					</div>
+				</div>
+				<div class="catalogue-card filtered-card" id="rolls_royce2" data-type="sport" data-capacity="4" data-price="96">
+					<div class="catalogue-card-top">
+						<div class="catalogue-card-top-text">
+							<h3 class="catalogue-card-name">Rolls-Royce</h3>
+							<p class="catalogue-card-type">Sport</p>
+						</div>
+						<div class="like-btn _icon-fav"></div>
+					</div>
+					<div class="catalogue-card-mid">
+						<div class="catalogue-card-img">
+							<img src="img/catalogue/rolls_royce.png" alt="">
+						</div>
+						<div class="catalogue-card-properties">
+							<p class="catalogue-card-property _icon-fuel">70L</p>
+							<p class="catalogue-card-property _icon-steering">Manual</p>
+							<p class="catalogue-card-property _icon-capacity">4 People</p>
+						</div>
+					</div>
+					<div class="catalogue-card-bot">
+						<div class="catalogue-card-price-info">
+							<p class="catalogue-card-price">$96.00/<span>day</span></p>
+						</div>
+						<a class="blue-btn" href="payment.html">Rent Now</a>
+					</div>
+				</div>
+
+				<div class="catalogue-card filtered-card" id="test1" data-type="sedan" data-capacity="4" data-price="60">
+					<div class="catalogue-card-top">
+						<div class="catalogue-card-top-text">
+							<h3 class="catalogue-card-name">sedan-4-60</h3>
+							<p class="catalogue-card-type">Sedan</p>
+						</div>
+						<div class="like-btn _icon-fav"></div>
+					</div>
+					<div class="catalogue-card-mid">
+						<div class="catalogue-card-img">
+							<img src="img/catalogue/honda_crv.png" alt="">
+						</div>
+						<div class="catalogue-card-properties">
+							<p class="catalogue-card-property _icon-fuel">70L</p>
+							<p class="catalogue-card-property _icon-steering">Manual</p>
+							<p class="catalogue-card-property _icon-capacity">4 People</p>
+						</div>
+					</div>
+					<div class="catalogue-card-bot">
+						<div class="catalogue-card-price-info">
+							<p class="catalogue-card-price">$96.00/<span>day</span></p>
+						</div>
+						<a class="blue-btn" href="payment.html">Rent Now</a>
+					</div>
+				</div>
+				<div class="catalogue-card filtered-card" id="test2" data-type="mvp" data-capacity="10" data-price="70">
+					<div class="catalogue-card-top">
+						<div class="catalogue-card-top-text">
+							<h3 class="catalogue-card-name">mvp-10-70</h3>
+							<p class="catalogue-card-type">MVP</p>
+						</div>
+						<div class="like-btn _icon-fav"></div>
+					</div>
+					<div class="catalogue-card-mid">
+						<div class="catalogue-card-img">
+							<img src="img/catalogue/toyota_anr.png" alt="">
+						</div>
+						<div class="catalogue-card-properties">
+							<p class="catalogue-card-property _icon-fuel">90L</p>
+							<p class="catalogue-card-property _icon-steering">Manual</p>
+							<p class="catalogue-card-property _icon-capacity">2 People</p>
+						</div>
+					</div>
+					<div class="catalogue-card-bot">
+						<div class="catalogue-card-price-info">
+							<p class="catalogue-card-price">$99.00/<span>day</span></p>
+						</div>
+						<a class="blue-btn" href="payment.html">Rent Now</a>
+					</div>
+				</div>
+				<div class="catalogue-card filtered-card" id="test3" data-type="coupe" data-capacity="2" data-price="120">
+					<div class="catalogue-card-top">
+						<div class="catalogue-card-top-text">
+							<h3 class="catalogue-card-name">coupe-2-120</h3>
+							<p class="catalogue-card-type">Coupe</p>
+						</div>
+						<div class="like-btn _icon-fav"></div>
+					</div>
+					<div class="catalogue-card-mid">
+						<div class="catalogue-card-img">
+							<img src="img/catalogue/nissan_gtr.png" alt="">
+						</div>
+						<div class="catalogue-card-properties">
+							<p class="catalogue-card-property _icon-fuel">80L</p>
+							<p class="catalogue-card-property _icon-steering">Manual</p>
+							<p class="catalogue-card-property _icon-capacity">2 People</p>
+						</div>
+					</div>
+					<div class="catalogue-card-bot">
+						<div class="catalogue-card-price-info">
+							<p class="catalogue-card-price">$80.00/<span>day</span></p>
+							<p class="catalogue-card-discount">$100.00</p>
+						</div>
+						<a class="blue-btn" href="payment.html">Rent Now</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+</main>
+<footer>
+	<div class="footer-container container-md pt-5 pb-4 pb-md-5">
+		<div class="footer-wrapper row justify-content-between m-0">
+			<div class="footer-brandinfo col-12 col-md-5 col-lg-6">
+				<h1 class="footer-brand logo">morent</h1>
+				<p class="footer-brandslogan light-gray col-12 col-lg-6 med-tx 16-12-tx mt-3">Our vision is to provide convenience and help increase your sales business.</p>
+			</div>
+			<div class="footer-cards col row row-cols-auto justify-content-between my-5 mt-md-0 mb-md-5 ms-md-2">
+				<div class="footer-card">
+					<h3 class="footer-cardheading dark-blue sbold-tx px20">About</h3>
+					<ul class="footer-links">
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">How it works</a></li>
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Featured</a></li>
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Partnership</a></li>
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Business Relation</a></li>
+					</ul>
+				</div>
+				<div class="footer-card mb-5 mb-md-0 order-md-1">
+					<h3 class="footer-cardheading dark-blue sbold-tx px20">Socials</h3>
+					<ul class="footer-links">
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Discord</a></li>
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Instagram</a></li>
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Twitter</a></li>
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Facebook</a></li>
+					</ul>
+				</div>
+				<div class="footer-card">
+					<h3 class="footer-cardheading dark-blue sbold-tx px20">Community</h3>
+					<ul class="footer-links">
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Events</a></li>
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Blog</a></li>
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Podcast</a></li>
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Invite a friend</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-license-info d-md-flex pt-md-5">
+				<div class="footer-agreement-info col-12 col-md-auto row row-cols-auto justify-content-between order-md-1 mb-4 mb-md-0">
+					<a href="##" class="footer-privacy black sbold-tx px16-12">Privacy & Policy</a>
+					<a href="##" class="footer-terms black sbold-tx px16-12">Terms & Condition</a>
+				</div>
+				<p class="footer-copyright col black sbold-tx px16-12">©2022 MORENT. All rights reserved</p>
+			</div>
+		</div>
+	</div>
+</footer>
+	<script src="js/script.js"></script>
+	<script src="js/filter.js"></script>
+	<script src="js/catalogue.js"></script>
+</body>
+</html>

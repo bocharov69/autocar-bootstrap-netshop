@@ -1,0 +1,654 @@
+<!-- kit variables -->
+
+
+
+
+
+
+
+<!-- end of kit variables -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Net shop template developing">
+	<meta name="keywords" content="HTML, CSS, JavaScript">
+	<meta name="author" content="github.com/bocharov69">
+	<link rel="stylesheet" href="css/nullstyle.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/iconsfont.css">
+	<link rel="stylesheet" href="css/index.css">
+	<title>Main</title>
+</head>
+<body>
+<header class="header">
+	<div class="container-md">
+		<nav class="navbar row align-items-center justify-content-between flex-md-nowrap pt-5 pb-4 pb-md-5 px-4">
+			<button class="navbar-toggler col-1 d-md-none order-md-5 p-0" type="button"><span></span></button>
+			<div class="navbar-collapse col order-md-3">
+				<ul class="navbar-nav row row-cols-auto flex-nowrap justify-content-end">
+					<li class="nav-item">
+						<a class="nav-btn _icon-favorite" href="#"></a>
+					</li>
+					<li class="nav-item has-note">
+						<a class="nav-btn _icon-notification" href="#"></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-btn _icon-settings" href="#"></a>
+					</li>
+				</ul>
+			</div>
+			<div class="navbar-placeholder col-8 col-sm-10 col-md-1 col-lg-2 order-md-2"></div>
+			<a class="navbar-profile nav-item col-1 p-0 order-md-4" style="justify-self: end;" href="#"><img class="nav-btn" src="img/main/avatar_male.png" alt=""></a>
+			<a class="navbar-brand logo col p-0 my-4 my-md-0 me-md-2 order-md-0" href="index.html">morent</a>
+			<form class="navbar-searchform col-md-5 col-12 row flex-nowrap align-items-center m-0 p-0 ps-3 p-md-3 ms-lg-5 ms-md-2 order-md-1" role="search">
+				<div class="navbar-searchwrapper col-10 col-sm-11 row flex-nowrap align-items-center py-3 p-md-0">
+					<label class="navbar-searchicon nav-btn col _icon-search" for="nav-search"></label>
+					<input class="navbar-livesearch col-10 col-lg-9 col-md-8 col-sm-11" id="nav-search" type="search" placeholder="Search something here">
+				</div>
+				<button class="navbar-filter nav-btn col _icon-filter ms-4 p-3 m-md-0 p-md-0" type="button"></button>
+			</form>
+		</nav>
+	</div>
+</header>
+<main>
+	<aside class="filterbar">
+	<div class="filterbar-types">
+		<h3 class="filterbar-heading">type</h3>
+		<div class="filterbar-type">
+			<input class="filterbar-checkbox" type="checkbox" id="sport" name="sport" data-filter="type-sport">
+			<label class="filterbar-label" for="sport">Sport<span class="filterbar-amount-span" id="sport-amount" data-amount="10">(10)</span></label>
+		</div>
+		<div class="filterbar-type">
+			<input class="filterbar-checkbox" type="checkbox" id="suv" name="suv" data-filter="type-suv">
+			<label class="filterbar-label" for="suv">SUV<span class="filterbar-amount-span" id="suv-amount" data-amount="12">(12)</span></label>
+		</div>
+		<div class="filterbar-type">
+			<input class="filterbar-checkbox" type="checkbox" id="mvp" name="mvp" data-filter="type-mvp">
+			<label class="filterbar-label" for="mvp">MVP<span class="filterbar-amount-span" id="mvp-amount" data-amount="16">(16)</span></label>
+		</div>
+		<div class="filterbar-type">
+			<input class="filterbar-checkbox" type="checkbox" id="sedan" name="sedan" data-filter="type-sedan">
+			<label class="filterbar-label" for="sedan">Sedan<span class="filterbar-amount-span" id="sedan-amount" data-amount="20">(20)</span></label>
+		</div>
+		<div class="filterbar-type">
+			<input class="filterbar-checkbox" type="checkbox" id="coupe" name="coupe" data-filter="type-coupe">
+			<label class="filterbar-label" for="coupe">Coupe<span class="filterbar-amount-span" id="coupe-amount" data-amount="14">(14)</span></label>
+		</div>
+		<div class="filterbar-type">
+			<input class="filterbar-checkbox" type="checkbox" id="hatchback" name="hatchback" data-filter="type-hatchback">
+			<label class="filterbar-label" for="hatchback">Hatchback<span class="filterbar-amount-span" id="hatchback-amount" data-amount="14">(14)</span></label>
+		</div>
+	</div>
+	<div class="filterbar-capacities">
+		<h3 class="filterbar-heading">capacity</h3>
+		<div class="filterbar-capacity">
+			<input class="filterbar-checkbox" type="checkbox" id="two-person" name="two-person" data-filter="capacity-2">
+			<label class="filterbar-label" for="two-person">2 Person<span class="filterbar-amount-span" id="two-person-amount" data-amount="10">(10)</span></label>
+		</div>
+		<div class="filterbar-capacity">
+			<input class="filterbar-checkbox" type="checkbox" id="four-person" name="four-person" data-filter="capacity-4">
+			<label class="filterbar-label" for="four-person">4 Person<span class="filterbar-amount-span" id="four-person-amount" data-amount="14">(14)</span></label>
+		</div>
+		<div class="filterbar-capacity">
+			<input class="filterbar-checkbox" type="checkbox" id="six-person" name="six-person" data-filter="capacity-6">
+			<label class="filterbar-label" for="six-person">6 Person<span class="filterbar-amount-span" id="six-person-amount" data-amount="12">(12)</span></label>
+		</div>
+		<div class="filterbar-capacity">
+			<input class="filterbar-checkbox" type="checkbox" id="eight-person" name="eight-person" data-filter="capacity-8">
+			<label class="filterbar-label" for="eight-person">8 or More<span class="filterbar-amount-span" id="eight-person-amount" data-amount="16">(16)</span></label>
+		</div>
+	</div>
+	<div class="filterbar-price ">
+		<h3 class="filterbar-heading">price</h3>
+		<div class="filterbar-price-range">
+			<input class="filterbar-price-scroll" type="range" id="price-scroll" name="price-scroll" min="0" max="120" value="100" step="10">
+			<label class="filterbar-label" for="price-scroll">Max. $<span id="max-price">100</span></label>
+		</div>
+	</div>
+	<div class="filterbar-loading-screen"><img src="img/main/load.gif" alt=""></div>
+</aside>
+	<article class="content">
+		<div class="content-wrapper">
+			<section class="content-section1">
+				<div class="section1-recomendation row row-cols-md-2 g-4 g-md-5">
+					<div class="section1-recomendation-visual">
+						<div class="section1-recomendation-picture">
+							<div class="section1-recomendation-imgtext">
+								<h3 class="section1-recomendation-imgheading white sbold-tx px32-20">Sports car with the best design and acceleration</h3>
+								<p class="section1-recomendation-imgdescription white med-tx px16-12 mt-3">Safety and comfort while driving a futuristic and elegant sports car</p>
+							</div>
+							<div class="section1-recomendation-img">
+								<img src="img/main/rec_pic1.png" alt="">
+							</div>
+						</div>
+						<div class="section1-recomendation-thumbs d-flex mt-4">
+							<div class="section1-recomendation-thumb">
+								<img src="img/main/rec_pic1.png" alt="">
+							</div>
+							<div class="section1-recomendation-thumb">
+								<img src="img/main/rec_pic2.png" alt="">
+							</div>
+							<div class="section1-recomendation-thumb">
+								<img src="img/main/rec_pic3.png" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="section1-recomendation-text p-3 p-md-4">
+						<div class="section1-recomendation-top">
+							<div class="section1-recomendation-toptext">
+								<h1 class="section1-recomendation-heading pb-3 black bold-tx px32-20">Nissan GT-R</h1>
+								<div class="section1-recomendation-rate row row-cols-auto align-items-center">
+									<div class="section1-recomendation-stars">
+										<img src="img/main/stars.png" style="width: 100%;height: 100%;object-fit: contain" alt="">
+									</div>
+									<p class="section1-recomendation-reviewers dark-blue med-tx px14-12">440+ Reviewers</p>
+								</div>
+							</div>
+							<div class="like-btn _icon-favorite"></div>
+						</div>
+						<div class="section1-recomendation-mid pt-1 pb-5 pt-md-4">
+							<p class="section1-recomendation-description mt-3 dark-blue reg-tx px20-12">NISMO has become the embodiment of Nissan's outstanding performance, inspired by the most unforgiving proving ground, the "race track".</p>
+							<div class="section1-recomendation-info row row-cols-auto gy-0 gx-md-5 justify-content-between">
+								<div class="section1-recomendation-properties">
+									<div class="section1-recomendation-property">
+										<p class="section1-recomendation-propertykey light-gray med-tx px20-12">Type Car</p>
+										<p class="section1-recomendation-propertyval dark-blue sbold-tx px20-12">Sport</p>
+									</div>
+									<div class="section1-recomendation-property">
+										<p class="section1-recomendation-propertykey light-gray med-tx px20-12">Steering</p>
+										<p class="section1-recomendation-propertyval dark-blue sbold-tx px20-12">Manual</p>
+									</div>
+								</div>
+								<div class="section1-recomendation-properties">
+									<div class="section1-recomendation-property">
+										<p class="section1-recomendation-propertykey light-gray med-tx px20-12">Capacity</p>
+										<p class="section1-recomendation-propertyval dark-blue sbold-tx px20-12">2 Person</p>
+									</div>
+									<div class="section1-recomendation-property">
+										<p class="section1-recomendation-propertykey light-gray med-tx px20-12">Gasoliner</p>
+										<p class="section1-recomendation-propertyval dark-blue sbold-tx px20-12">70L</p>
+									</div>
+								</div>
+							</div>						
+						</div>
+						<div class="section1-recomendation-bot row row-cols-auto gx-0 gy-4 justify-content-between align-items-center">
+							<div class="section1-recomendation-price-info col">
+								<p class="section1-recomendation-price black bold-tx px32-20">$80.00/<span class="light-gray bold-tx px16-12">days</span></p>
+								<p class="section1-recomendation-discount mt-3 light-gray bold-tx px16-12" style="text-decoration: line-through;">$100.00</p>
+							</div>
+							<a class="blue-btn bold-tx px16 py-3 px-3 px-md-5" href="payment.html">Rent Now</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="content-section2 row my-5 px-1 py-3 px-md-4 py-md-4 ms-md-0">
+				<div class="section2-top-info row row-cols-auto flex-nowrap align-items-center">
+					<h1 class="section2-heading black sbold-tx px20">Reviews</h1>
+					<div class="blue-btn py-2 px-3">13</div>
+				</div>
+				<div class="section2-reviews mt-4">
+					<div class="section2-review">
+						<div class="section2-review-top">
+							<div class="section2-reviewer-avatar">
+								<img src="img/main/avatar_male.png" alt="">
+							</div>
+							<div class="section2-reviewer-info">
+								<p class="section2-reviewer-name">Alex Stanton</p>
+								<p class="section2-reviewer-bio">CEO at Bukalapak</p>
+							</div>
+							<div class="section2-review-info">
+								<p class="section2-review-date">21 July 2022</p>
+								<div class="section2-review-stars">
+									<img src="img/main/stars.png" alt="">
+								</div>
+							</div>
+						</div>
+						<p class="section2-review-text">We are very happy with the service from the MORENT App. Morent has a low price . . . </p>
+					</div>
+					<div class="section2-review">
+						<div class="section2-review-top">
+							<div class="section2-reviewer-avatar">
+								<img src="img/main/avatar_female.png" alt="">
+							</div>
+							<div class="section2-reviewer-info">
+								<p class="section2-reviewer-name">Skylar Dias</p>
+								<p class="section2-reviewer-bio">CEO at Amazon</p>
+							</div>
+							<div class="section2-review-info">
+								<p class="section2-review-date">20 July 2022</p>
+								<div class="section2-review-stars">
+									<img src="img/main/stars.png" alt="">
+								</div>
+							</div>
+						</div>
+						<p class="section2-review-text">We are greatly helped by the services of the MORENT Application. Morent has a low . . .</p>
+					</div>
+					<div class="section2-review">
+						<div class="section2-review-top">
+							<div class="section2-reviewer-avatar">
+								<img src="img/main/avatar_male.png" alt="">
+							</div>
+							<div class="section2-reviewer-info">
+								<p class="section2-reviewer-name">Alex Stanton</p>
+								<p class="section2-reviewer-bio">CEO at Bukalapak</p>
+							</div>
+							<div class="section2-review-info">
+								<p class="section2-review-date">21 July 2022</p>
+								<div class="section2-review-stars">
+									<img src="img/main/stars.png" alt="">
+								</div>
+							</div>
+						</div>
+						<p class="section2-review-text">We are very happy with the service from the MORENT App. Morent has a low price . . . </p>
+					</div>
+					<div class="section2-review">
+						<div class="section2-review-top">
+							<div class="section2-reviewer-avatar">
+								<img src="img/main/avatar_male.png" alt="">
+							</div>
+							<div class="section2-reviewer-info">
+								<p class="section2-reviewer-name">Alex Stanton</p>
+								<p class="section2-reviewer-bio">CEO at Bukalapak</p>
+							</div>
+							<div class="section2-review-info">
+								<p class="section2-review-date">21 July 2022</p>
+								<div class="section2-review-stars">
+									<img src="img/main/stars.png" alt="">
+								</div>
+							</div>
+						</div>
+						<p class="section2-review-text">We are very happy with the service from the MORENT App. Morent has a low price . . . </p>
+					</div>
+				</div>
+				<div class="section2-spoiler light-gray med-tx px16-14"><span></span></div>
+			</section>
+			<section class="content-section3">
+				<div class="section3-catalogue">
+					<div class="section3-recent">
+						<div class="section3-recent-heading">
+							<p class="section3-recent-text light-gray sbold-tx px16-14">Recent Car</p>
+							<a href="catalogue.html" class="section3-recent-link primary-blue sbold-tx px16-12">View All</a>
+						</div>
+						<div class="section3-recent-catalogue-container section3-catalogue-container">
+							<div class="section3-recent-catalogue-wrapper section3-catalogue-wrapper">
+								<div class="section3-recent-catalogue row row-cols-auto flex-nowrap g-0">
+									<div class="section3-recent-card catalogue-card filtered-card" id="koenigsegg" data-type="sport" data-capacity="2" data-price="99">
+										<div class="catalogue-card-top">
+											<div class="catalogue-card-top-text">
+												<h3 class="catalogue-card-name">Koenigsegg</h3>
+												<p class="catalogue-card-type">Sport</p>
+											</div>
+											<div class="like-btn _icon-favorite"></div>
+										</div>
+										<div class="catalogue-card-mid">
+											<div class="catalogue-card-img">
+												<img src="img/catalogue/koenigsegg.png" alt="">
+											</div>
+											<div class="catalogue-card-properties">
+												<p class="catalogue-card-property _icon-fuel">90L</p>
+												<p class="catalogue-card-property _icon-steering">Manual</p>
+												<p class="catalogue-card-property _icon-capacity">2 People</p>
+											</div>
+										</div>
+										<div class="catalogue-card-bot">
+											<div class="catalogue-card-price-info">
+												<p class="catalogue-card-price">$99.00/<span>day</span></p>
+											</div>
+											<a class="blue-btn" href="payment.html">Rent Now</a>
+										</div>
+									</div>
+									<div class="section3-recent-card catalogue-card filtered-card" id="nissan_gtr" data-type="sport" data-capacity="2" data-price="90">
+										<div class="catalogue-card-top">
+											<div class="catalogue-card-top-text">
+												<h3 class="catalogue-card-name">Nissan GT-R</h3>
+												<p class="catalogue-card-type">Sport</p>
+											</div>
+											<div class="like-btn _icon-fav"></div>
+										</div>
+										<div class="catalogue-card-mid">
+											<div class="catalogue-card-img">
+												<img src="img/catalogue/nissan_gtr.png" alt="">
+											</div>
+											<div class="catalogue-card-properties">
+												<p class="catalogue-card-property _icon-fuel">80L</p>
+												<p class="catalogue-card-property _icon-steering">Manual</p>
+												<p class="catalogue-card-property _icon-capacity">2 People</p>
+											</div>
+										</div>
+										<div class="catalogue-card-bot">
+											<div class="catalogue-card-price-info">
+												<p class="catalogue-card-price">$80.00/<span>day</span></p>
+												<p class="catalogue-card-discount">$100.00</p>
+											</div>
+											<a class="blue-btn" href="payment.html">Rent Now</a>
+										</div>
+									</div>
+									<div class="section3-recent-card catalogue-card filtered-card" id="rolls_royce" data-type="sport" data-capacity="4" data-price="96">
+										<div class="catalogue-card-top">
+											<div class="catalogue-card-top-text">
+												<h3 class="catalogue-card-name">Rolls-Royce</h3>
+												<p class="catalogue-card-type">Sport</p>
+											</div>
+											<div class="like-btn _icon-fav"></div>
+										</div>
+										<div class="catalogue-card-mid">
+											<div class="catalogue-card-img">
+												<img src="img/catalogue/rolls_royce.png" alt="">
+											</div>
+											<div class="catalogue-card-properties">
+												<p class="catalogue-card-property _icon-fuel">70L</p>
+												<p class="catalogue-card-property _icon-steering">Manual</p>
+												<p class="catalogue-card-property _icon-capacity">4 People</p>
+											</div>
+										</div>
+										<div class="catalogue-card-bot">
+											<div class="catalogue-card-price-info">
+												<p class="catalogue-card-price">$96.00/<span>day</span></p>
+											</div>
+											<a class="blue-btn" href="payment.html">Rent Now</a>
+										</div>
+									</div>
+
+									<div class="section3-recent-card catalogue-card filtered-card" id="rolls_royce2" data-type="sport" data-capacity="4" data-price="96">
+										<div class="catalogue-card-top">
+											<div class="catalogue-card-top-text">
+												<h3 class="catalogue-card-name">Rolls-Royce</h3>
+												<p class="catalogue-card-type">Sport</p>
+											</div>
+											<div class="like-btn _icon-fav"></div>
+										</div>
+										<div class="catalogue-card-mid">
+											<div class="catalogue-card-img">
+												<img src="img/catalogue/rolls_royce.png" alt="">
+											</div>
+											<div class="catalogue-card-properties">
+												<p class="catalogue-card-property _icon-fuel">70L</p>
+												<p class="catalogue-card-property _icon-steering">Manual</p>
+												<p class="catalogue-card-property _icon-capacity">4 People</p>
+											</div>
+										</div>
+										<div class="catalogue-card-bot">
+											<div class="catalogue-card-price-info">
+												<p class="catalogue-card-price">$96.00/<span>day</span></p>
+											</div>
+											<a class="blue-btn" href="payment.html">Rent Now</a>
+										</div>
+									</div>
+									<div class="section3-recent-card catalogue-card filtered-card" id="koenigsegg2" data-type="sport" data-capacity="2" data-price="99">
+										<div class="catalogue-card-top">
+											<div class="catalogue-card-top-text">
+												<h3 class="catalogue-card-name">Koenigsegg</h3>
+												<p class="catalogue-card-type">Sport</p>
+											</div>
+											<div class="like-btn _icon-fav"></div>
+										</div>
+										<div class="catalogue-card-mid">
+											<div class="catalogue-card-img">
+												<img src="img/catalogue/koenigsegg.png" alt="">
+											</div>
+											<div class="catalogue-card-properties">
+												<p class="catalogue-card-property _icon-fuel">90L</p>
+												<p class="catalogue-card-property _icon-steering">Manual</p>
+												<p class="catalogue-card-property _icon-capacity">2 People</p>
+											</div>
+										</div>
+										<div class="catalogue-card-bot">
+											<div class="catalogue-card-price-info">
+												<p class="catalogue-card-price">$99.00/<span>day</span></p>
+											</div>
+											<a class="blue-btn" href="payment.html">Rent Now</a>
+										</div>
+									</div>
+									<div class="section3-recent-card catalogue-card filtered-card" id="nissan_gtr2" data-type="sport" data-capacity="2" data-price="90">
+										<div class="catalogue-card-top">
+											<div class="catalogue-card-top-text">
+												<h3 class="catalogue-card-name">Nissan GT-R</h3>
+												<p class="catalogue-card-type">Sport</p>
+											</div>
+											<div class="like-btn _icon-fav"></div>
+										</div>
+										<div class="catalogue-card-mid">
+											<div class="catalogue-card-img">
+												<img src="img/catalogue/nissan_gtr.png" alt="">
+											</div>
+											<div class="catalogue-card-properties">
+												<p class="catalogue-card-property _icon-fuel">80L</p>
+												<p class="catalogue-card-property _icon-steering">Manual</p>
+												<p class="catalogue-card-property _icon-capacity">2 People</p>
+											</div>
+										</div>
+										<div class="catalogue-card-bot">
+											<div class="catalogue-card-price-info">
+												<p class="catalogue-card-price">$80.00/<span>day</span></p>
+												<p class="catalogue-card-discount">$100.00</p>
+											</div>
+											<a class="blue-btn" href="payment.html">Rent Now</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="section3-recomend">
+						<div class="section3-recomend-heading">
+							<p class="section3-recomend-text light-gray sbold-tx px16-14">Recomend Car</p>
+							<a href="catalogue.html" class="section3-recomend-link primary-blue sbold-tx px16-12">View All</a>
+						</div>
+						<div class="section3-recomend-catalogue-container section3-catalogue-container">
+							<div class="section3-recomend-catalogue-wrapper section3-catalogue-wrapper">
+								<div class="section3-recomend-catalogue row row-cols-auto flex-nowrap g-0">
+									<div class="section3-recomend-card catalogue-card filtered-card" id="toyota_anr" data-type="suv" data-capacity="6" data-price="72">
+										<div class="catalogue-card-top">
+											<div class="catalogue-card-top-text">
+												<h3 class="catalogue-card-name">All New Rush</h3>
+												<p class="catalogue-card-type">SUV</p>
+											</div>
+											<div class="like-btn _icon-fav"></div>
+										</div>
+										<div class="catalogue-card-mid">
+											<div class="catalogue-card-img">
+												<img src="img/catalogue/toyota_anr.png" alt="">
+											</div>
+											<div class="catalogue-card-properties">
+												<p class="catalogue-card-property _icon-fuel">70L</p>
+												<p class="catalogue-card-property _icon-steering">Manual</p>
+												<p class="catalogue-card-property _icon-capacity">6 People</p>
+											</div>
+										</div>
+										<div class="catalogue-card-bot">
+											<div class="catalogue-card-price-info">
+												<p class="catalogue-card-price">$72.00/<span>day</span></p>
+												<p class="catalogue-card-discount">$80.00</p>
+											</div>
+											<a class="blue-btn" href="payment.html">Rent Now</a>
+										</div>
+									</div>
+									<div class="section3-recomend-card catalogue-card filtered-card" id="honda_crv" data-type="suv" data-capacity="6" data-price="80">
+										<div class="catalogue-card-top">
+											<div class="catalogue-card-top-text">
+												<h3 class="catalogue-card-name">CR-V</h3>
+												<p class="catalogue-card-type">SUV</p>
+											</div>
+											<div class="like-btn _icon-favorite"></div>
+										</div>
+										<div class="catalogue-card-mid">
+											<div class="catalogue-card-img">
+												<img src="img/catalogue/honda_crv.png" alt="">
+											</div>
+											<div class="catalogue-card-properties">
+												<p class="catalogue-card-property _icon-fuel">80L</p>
+												<p class="catalogue-card-property _icon-steering">Manual</p>
+												<p class="catalogue-card-property _icon-capacity">6 People</p>
+											</div>
+										</div>
+										<div class="catalogue-card-bot">
+											<div class="catalogue-card-price-info">
+												<p class="catalogue-card-price">$80.00/<span>day</span></p>
+											</div>
+											<a class="blue-btn" href="payment.html">Rent Now</a>
+										</div>
+									</div>
+									<div class="section3-recomend-card catalogue-card filtered-card" id="toyota_ant" data-type="suv" data-capacity="6" data-price="74">
+										<div class="catalogue-card-top">
+											<div class="catalogue-card-top-text">
+												<h3 class="catalogue-card-name">All New Terios</h3>
+												<p class="catalogue-card-type">SUV</p>
+											</div>
+											<div class="like-btn _icon-fav"></div>
+										</div>
+										<div class="catalogue-card-mid">
+											<div class="catalogue-card-img">
+												<img src="img/catalogue/toyota_ant.png" alt="">
+											</div>
+											<div class="catalogue-card-properties">
+												<p class="catalogue-card-property _icon-fuel">90L</p>
+												<p class="catalogue-card-property _icon-steering">Manual</p>
+												<p class="catalogue-card-property _icon-capacity">6 People</p>
+											</div>
+										</div>
+										<div class="catalogue-card-bot">
+											<div class="catalogue-card-price-info">
+												<p class="catalogue-card-price">$74.00/<span>day</span></p>
+											</div>
+											<a class="blue-btn" href="payment.html">Rent Now</a>
+										</div>
+									</div>
+
+									<div class="section3-recomend-card catalogue-card filtered-card" id="rolls_royce3" data-type="sport" data-capacity="4" data-price="96">
+										<div class="catalogue-card-top">
+											<div class="catalogue-card-top-text">
+												<h3 class="catalogue-card-name">Rolls-Royce</h3>
+												<p class="catalogue-card-type">Sport</p>
+											</div>
+											<div class="like-btn _icon-fav"></div>
+										</div>
+										<div class="catalogue-card-mid">
+											<div class="catalogue-card-img">
+												<img src="img/catalogue/rolls_royce.png" alt="">
+											</div>
+											<div class="catalogue-card-properties">
+												<p class="catalogue-card-property _icon-fuel">70L</p>
+												<p class="catalogue-card-property _icon-steering">Manual</p>
+												<p class="catalogue-card-property _icon-capacity">4 People</p>
+											</div>
+										</div>
+										<div class="catalogue-card-bot">
+											<div class="catalogue-card-price-info">
+												<p class="catalogue-card-price">$96.00/<span>day</span></p>
+											</div>
+											<a class="blue-btn" href="payment.html">Rent Now</a>
+										</div>
+									</div>
+									<div class="section3-recomend-card catalogue-card filtered-card" id="koenigsegg3" data-type="sport" data-capacity="2" data-price="99">
+										<div class="catalogue-card-top">
+											<div class="catalogue-card-top-text">
+												<h3 class="catalogue-card-name">Koenigsegg</h3>
+												<p class="catalogue-card-type">Sport</p>
+											</div>
+											<div class="like-btn _icon-fav"></div>
+										</div>
+										<div class="catalogue-card-mid">
+											<div class="catalogue-card-img">
+												<img src="img/catalogue/koenigsegg.png" alt="">
+											</div>
+											<div class="catalogue-card-properties">
+												<p class="catalogue-card-property _icon-fuel">90L</p>
+												<p class="catalogue-card-property _icon-steering">Manual</p>
+												<p class="catalogue-card-property _icon-capacity">2 People</p>
+											</div>
+										</div>
+										<div class="catalogue-card-bot">
+											<div class="catalogue-card-price-info">
+												<p class="catalogue-card-price">$99.00/<span>day</span></p>
+											</div>
+											<a class="blue-btn" href="payment.html">Rent Now</a>
+										</div>
+									</div>
+									<div class="section3-recomend-card catalogue-card filtered-card" id="nissan_gtr3" data-type="sport" data-capacity="2" data-price="90">
+										<div class="catalogue-card-top">
+											<div class="catalogue-card-top-text">
+												<h3 class="catalogue-card-name">Nissan GT-R</h3>
+												<p class="catalogue-card-type">Sport</p>
+											</div>
+											<div class="like-btn _icon-fav"></div>
+										</div>
+										<div class="catalogue-card-mid">
+											<div class="catalogue-card-img">
+												<img src="img/catalogue/nissan_gtr.png" alt="">
+											</div>
+											<div class="catalogue-card-properties">
+												<p class="catalogue-card-property _icon-fuel">80L</p>
+												<p class="catalogue-card-property _icon-steering">Manual</p>
+												<p class="catalogue-card-property _icon-capacity">2 People</p>
+											</div>
+										</div>
+										<div class="catalogue-card-bot">
+											<div class="catalogue-card-price-info">
+												<p class="catalogue-card-price">$80.00/<span>day</span></p>
+												<p class="catalogue-card-discount">$100.00</p>
+											</div>
+											<a class="blue-btn" href="payment.html">Rent Now</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</article>
+</main>
+<footer>
+	<div class="footer-container container-md pt-5 pb-4 pb-md-5">
+		<div class="footer-wrapper row justify-content-between m-0">
+			<div class="footer-brandinfo col-12 col-md-5 col-lg-6">
+				<h1 class="footer-brand logo">morent</h1>
+				<p class="footer-brandslogan light-gray col-12 col-lg-6 med-tx 16-12-tx mt-3">Our vision is to provide convenience and help increase your sales business.</p>
+			</div>
+			<div class="footer-cards col row row-cols-auto justify-content-between my-5 mt-md-0 mb-md-5 ms-md-2">
+				<div class="footer-card">
+					<h3 class="footer-cardheading dark-blue sbold-tx px20">About</h3>
+					<ul class="footer-links">
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">How it works</a></li>
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Featured</a></li>
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Partnership</a></li>
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Business Relation</a></li>
+					</ul>
+				</div>
+				<div class="footer-card mb-5 mb-md-0 order-md-1">
+					<h3 class="footer-cardheading dark-blue sbold-tx px20">Socials</h3>
+					<ul class="footer-links">
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Discord</a></li>
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Instagram</a></li>
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Twitter</a></li>
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Facebook</a></li>
+					</ul>
+				</div>
+				<div class="footer-card">
+					<h3 class="footer-cardheading dark-blue sbold-tx px20">Community</h3>
+					<ul class="footer-links">
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Events</a></li>
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Blog</a></li>
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Podcast</a></li>
+						<li class="footer-link"><a class="light-gray med-tx px16" href="##">Invite a friend</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-license-info d-md-flex pt-md-5">
+				<div class="footer-agreement-info col-12 col-md-auto row row-cols-auto justify-content-between order-md-1 mb-4 mb-md-0">
+					<a href="##" class="footer-privacy black sbold-tx px16-12">Privacy & Policy</a>
+					<a href="##" class="footer-terms black sbold-tx px16-12">Terms & Condition</a>
+				</div>
+				<p class="footer-copyright col black sbold-tx px16-12">©2022 MORENT. All rights reserved</p>
+			</div>
+		</div>
+	</div>
+</footer>
+	<script src="js/script.js"></script>
+	
+	<script src="js/index.js"></script>
+</body>
+</html>

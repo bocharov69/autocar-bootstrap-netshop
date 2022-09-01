@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'iconsfont';
+  src:  url('../fonts/iconsfont/iconsfont.eot?b1upx1');
+  src:  url('../fonts/iconsfont/iconsfont.eot?b1upx1#iefix') format('embedded-opentype'),
+    url('../fonts/iconsfont/iconsfont.ttf?b1upx1') format('truetype'),
+    url('../fonts/iconsfont/iconsfont.woff?b1upx1') format('woff'),
+    url('../fonts/iconsfont/iconsfont.svg?b1upx1#iconsfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block; 
+}
+
+[class^="_icon-"]::before, [class*=" _icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'iconsfont' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-steering:before {
+  content: "\e907";
+}
+._icon-capacity:before {
+  content: "\e90e";
+}
+._icon-fuel:before {
+  content: "\e90f";
+}
+._icon-filter:before {
+  content: "\e900";
+}
+._icon-search:before {
+  content: "\e901";
+}
+._icon-notification:before {
+  content: "\e902";
+}
+._icon-settings:before {
+  content: "\e903";
+}
+._icon-favorite:before {
+  content: "\e904";
+}
+._icon-checkbox:before {
+  content: "\e905";
+}
+._icon-fav:before {
+  content: "\e906";
+}
